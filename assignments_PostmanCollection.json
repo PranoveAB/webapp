@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "97e90e72-5181-4ed4-9f5a-9755f5d65b58",
+		"name": "assignmentsAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "11689027"
+	},
+	"item": [
+		{
+			"name": "v1/assignments",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "abc456",
+						"username": "jane.doe@gmail.com"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Assignment 2\",\r\n  \"points\": 100,\r\n  \"num_of_attemps\": 0,\r\n  \"deadline\": \"2016-08-29T09:12:33.001Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/v1/assignments"
+			},
+			"response": []
+		},
+		{
+			"name": "v1/getAssignments",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "abc123",
+						"username": "john.doe@gmail.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/v1/assignments"
+			},
+			"response": []
+		},
+		{
+			"name": "v1/assignments/assignmentID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "abc456",
+						"username": "jane.doe@gmail.com"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:5000/v1/assignments/13caa053-45d0-4c7c-8a6a-960669bfbc44"
+			},
+			"response": []
+		},
+		{
+			"name": "v1/assignments/assignmentID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "abc456",
+						"username": "jane.doe@gmail.com"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n        \"name\": \"Assignment 1\",\r\n        \"points\": 300,\r\n        \"num_of_attemps\": 440,\r\n        \"deadline\": \"2016-08-29T09:12:33.001Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/v1/assignments/0ae48a81-2707-4a6e-8f47-09b5a46a5658"
+			},
+			"response": []
+		},
+		{
+			"name": "healthz",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/healthy"
+			},
+			"response": []
+		},
+		{
+			"name": "v1/assignments/assignmentID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "jane.doe@gmail.com",
+						"password": "abc456"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/v1/assignments/656fa2c6-26d0-49a5-9078-c4a037a94ea8"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
